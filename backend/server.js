@@ -25,7 +25,7 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 app.use('/api/rakhi', rakhiRoutes);
 
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
